@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "project": "Multi-Tenant-Cosmos-CMK-Encryption",
+  "rank": 25,
+  "action": "plan_multi_tenant_cosmos_cmk_encryption",
+  "allowedCredentialModes": [
+    "managed_identity",
+    "workload_identity"
+  ],
+  "protectedTargets": [
+    "production",
+    "break-glass"
+  ],
+  "allowedTenantIds": [
+    "tenant-a"
+  ]
+}
