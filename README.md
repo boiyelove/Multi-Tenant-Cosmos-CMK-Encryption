@@ -41,6 +41,14 @@ tests cannot claim a live cloud change occurred.
 
 The upper boundary names the principal services and technologies used by this repository. The lower boundary shows the implemented control flow: desired state is validated, provider action remains an explicit integration gate, and sanitized evidence is retained for review and deterministic replay.
 
+## Best complementary diagram
+
+**Recommended view: Tenant key and encryption lifecycle.** A lifecycle view is the strongest complement because it makes state transitions, approval points, expiry or recovery, and operational ownership explicit.
+
+![Icon-based tenant key and encryption lifecycle for Multi-Tenant-Cosmos-CMK-Encryption](docs/operational-view.svg)
+
+The view follows **Create tenant-owned key → Bind managed identity → Encrypt tenant database → Rotate and verify access**. Use it during design reviews, operational walkthroughs, and failure-mode discussions; use the logical architecture above when the question is which technologies integrate.
+
 ## Quickstart
 
 Requirements: Python 3.11+ and Git. No Azure credentials are required.
